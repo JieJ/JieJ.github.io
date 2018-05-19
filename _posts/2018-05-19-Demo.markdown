@@ -1,0 +1,43 @@
+---
+layout: post
+title:  "常用文本分类性能指标及其计算方法"
+date:   2018-05-19 16:29:43 +0800
+categories: jekyll update
+---
+
+
+### 常用文本分类性能指标及其计算方法
+
+假设完成一个文本分类任务，一共有N个类别，类别名称分别为C1,…, Cn
+当你完成了分类任务以后，你可以得到这样一张表格：
+
+| Label | True Positive | False Positive | False Negative |
+| :---: | :-----------: | :------------: | :------------: |
+|  C1   |     tp-1      |      fp-1      |      fn-1      |
+|  C2   |     tp-2      |      fp-2      |      fn-2      |
+|  ...  |               |                |                |
+|  Cn   |     tp-n      |      fp-n      |      fn-n      |
+
+表中每一行显示某一类别关于True Positive、False Positive、True Negative、False Negative的相关数据。
+
+* True Positive：判定为该类别并且真实属于该类别
+* False Positive：判定为该类别但真实不属于该类别
+* False Negative：判定不属于该类别但真实属于该类别
+
+
+
+Jekyll also offers powerful support for code snippets:
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
